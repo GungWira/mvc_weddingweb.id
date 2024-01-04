@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/homepage/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class='container'>
+      <div class='cover-navbar'>
+        <div class='left-navbar'>
+          <a href='/'>
+            <img src="/homepage/svg/logo-black.svg" alt='Logo'/>
+          </a>
+        </div>
+        <div class="mid-navbar">
+          <a to="/#favorite" class='navbarLink'>Favorite</a>
+          <a to="/#feature" class='navbarLink'>Feature</a>
+          <a to="/#theme" class='navbarLink'>Theme</a>
+          <button class='ham' id='ham'>
+            <img src="/homepage/svg/ham-menu.svg" alt='ham'/>
+          </button>
+        </div>
+        <div class='right-navbar'>
+          <button type='button'class='unfill'>
+            <img src="/homepage/svg/whatsapp_black.svg" alt='WhatsApp'/>
+            <p>Hubungi</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class='mobileNav nonActive'>
+      <a to="/#favorite" class='navbarLink'>Favorite</a>
+      <a to="/#feature" class='navbarLink'>Feature</a>
+      <a to="/#theme" class='navbarLink'>Theme</a>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <!-- Hero -->
+  <div class="container">
+    <div class="hero-section">
+      <div class="detail-hero-section">
+        <h1>Solusi Instant Undangan Pernikahan Digital</h1>
+        <p>Puluhan template menarik yang dapat anda gunakan dengan cepat dan mudah!</p>
+        <div class="hero-box-button">
+          <button class="unfill-button">
+            <img src="/homepage/svg/click.svg" alt='click'/>
+            <p>Pesan Sekarang</p>
+          </button>
+        </div>
+      </div>
+      <div class="image-hero-section">
+        <video src="/homepage/video/homepage-video.mp4" autoplay muted></video>
+      </div>
+    </div>
+  </div>
+  <!-- Hero -->
+  <!-- Marquee -->
+  <div class="cover-moving-text">
+    <div class='border border-left'></div>
+    <div class="moving-text">
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+    </div>
+    <div class="moving-text">
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+      <img src="/homepage/svg/marquee.svg" alt="marquee" />
+    </div>
+    <div class='border border-right'></div>
+  </div>
+  <!-- Marquee -->
+  <!-- Favorite -->
+  <div class="favorite" id="favorite">
+    <div class='container'>
+      <%- include('textTheme', {hastag:'Favorite', heading:'Desain yang lagi viral nih!', subheading:'Lihat beberapa template favorite user WeddingWeb!', alpha:""})%>
+    </div>
+    <div class="box-favorite">
+      <a href="/template/001A">
+        <div class="card-favorite">
+          <img src="/homepage/img/001A.png" alt="White Serenity"/>
+          <span>#top1</span>
+          <p>White Serenity</p>
+        </div>
+      </a>
+      <a href="/template/002A">
+        <div class="card-favorite">
+          <img src="/homepage/img/002A.png" alt="ok"/>
+          <span>#top2</span>
+          <p>Rose Radiance</p>
+        </div>
+      </a>
+      <a href="/template/003A">
+        <div class="card-favorite">
+          <img src="/homepage/img/003A.png" alt="ok"/>
+          <span>#top3</span>
+          <p>Majestic Sunbeam</p>
+        </div>
+      </a>
+      <a href="/template/004A">
+        <div class="card-favorite">
+          <img src="/homepage/img/004A.png" alt="ok"/>
+          <span>#top4</span>
+          <p>Gossamer Blueas</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- Favorite -->
+  <!-- About -->
+  <div class="about-page">
+    <div class='container'>
+      <div class='aboutPage-left'>
+        <%- include('textTheme', 
+          {hastag:'AboutUs', 
+          heading:'Pasti happy deh sama kita!', 
+          subheading:'WeddingWeb merupakan pusat undangan digital Indonesia yang telah terpercaya untuk membantu orang - orang dalam membauat undangan digitalnya!', 
+          alpha:"alpha"})
+        %>
+        <div class='items-about'>
+          <div class='item-about'>
+            <img src="/homepage/svg/lighting.svg" alt='lighting' />
+            <h2>Pengerjaan Secepat Kilat!</h2>
+            <p>Proses pengerjaan websitemu akan dilakukan pada hari yang sama saat proses pemesanan selesai sehingga web
+              dapat selesai dengan cepat!</p>
+          </div>
+          <div class='item-about'>
+            <img src="/homepage/svg/code.svg" alt='code' />
+            <h2>Semua Page dapat Dicustom!</h2>
+            <p>Websitemu bukan sekedar template yang tidak dapat diedit lagi, namun berupa source code yang dapat diubah
+              sesuka hati!</p>
+          </div>
+        </div>
+      </div>
+      <div class='aboutPage-right'>
+        <img src="/homepage/img/about_img.png" alt='about_img' />
+      </div>
+    </div>
+  </div>
+  <!-- About -->
+  <!-- Features -->
+  <div class="feature" id="feature">
+    <div class="container">
+      <%- include('textTheme', 
+        {hastag:'Feature', 
+        heading:'Paling lengkap deh pokoknya!', 
+        subheading:'Berikut beberapa fitur luarbiasa yang dapat ditambahkan pada undangan digital Anda!', 
+        alpha:""})
+      %>
+      <div class="items-feature">
+        <div class="item">
+          <img src="/homepage/svg/countdown.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Countdown</p>
+            <span>Hitung mundur menuju acara</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/reservation.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Reservation</p>
+            <span>Reservasi otomatis WhatsApp</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/music.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Music</p>
+            <span>Gratis background musik</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/maps.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Maps</p>
+            <span>Lokasi acara real time</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/animation.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Animation</p>
+            <span>Website dengan animasi menarik</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/gallery.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Gallery</p>
+            <span>Galeri foto</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/couple.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Couple</p>
+            <span>Foto dan nama mempelai</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/filter.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Filter</p>
+            <span>Berbagi instagram filter</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/gift.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Gift</p>
+            <span>Hadiah pernikahan online</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/passanger.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Custon Name</p>
+            <span>Kastem penerima undangan</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/chat.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Chat</p>
+            <span>Pesan online pengguna</span>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/homepage/svg/live.svg" alt="item"/>
+          <div class="detail-item">
+            <p>Live</p>
+            <span>Berbagai live stream</span>
+          </div>
+        </div>
+        <div class="expand-area">
+          <button>Lihat lebih</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Features -->
+  <!-- Offers -->
+  <div class="container container_offers">
+    <div class="offers">
+      <div class="text-side">
+        <%- include('textTheme', 
+        {hastag:'Offers', 
+        heading:'Grand Opening Discount!', 
+        subheading:'Yuk pesan paket pernikahanmu sekarang dan dapatkan potongan harga spesial', 
+        alpha:"alpha"})
+        %>
+        <div class="countdown">
+          <div class="item-countdown day">
+            <p>12</p>
+            <span>hari</span>
+          </div>
+          <div class="item-countdown hour">
+            <p>14</p>
+            <span>jam</span>
+          </div>
+          <div class="item-countdown minute">
+            <p>37</p>
+            <span>menit</span>
+          </div>
+          <div class="item-countdown second">
+            <p>48</p>
+            <span>detik</span>
+          </div>
+        </div>
+        <button class="fill-button">
+          <img src="/homepage/svg/click.svg" alt='click'/>
+          <p>Pesan Sekarang</p>
+        </button>
+      </div>
+      <div class="img-side">
+        <div class="cover-img"></div>
+        <img src="/homepage/img/offers_img.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- Offers -->
+  <!-- Themes -->
+  <div class="themes" id="theme">
+    <div class="container">
+      <%- include('textTheme', 
+        {hastag:'Themes', 
+        heading:'Estetik? Woiya dong jelas!', 
+        subheading:'Ini dia berbagai template keren yang bisa Anda gunakan sebagai website undangan pernikahan digital Anda!', 
+        alpha:""})
+        %>
+    </div>
+    <div class="cover-themes">
+      <h2>Elegant Themes</h2>
+      <p>Tema floral yang menambah kesan estetik pada undanganmu!</p>
+      <div class="box-themes">
+        <div class="card-theme">
+          <a href="">
+            <img src="/homepage/img/001A.png" alt="" />
+          </a>
+          <button>
+            <img src="/homepage/svg/click.svg" alt="click" />
+            <p>Order Sekarang</p>
+          </button>
+        </div>
+        <div class="card-theme">
+          <a href="">
+            <img src="/homepage/img/002A.png" alt="" />
+          </a>
+          <button>
+            <img src="/homepage/svg/click.svg" alt="click" />
+            <p>Order Sekarang</p>
+          </button>
+        </div>
+        <div class="card-theme">
+          <a href="">
+            <img src="/homepage/img/003A.png" alt="" />
+          </a>
+          <button>
+            <img src="/homepage/svg/click.svg" alt="click" />
+            <p>Order Sekarang</p>
+          </button>
+        </div>
+        <div class="card-theme">
+          <a href="">
+            <img src="/homepage/img/004A.png" alt="" />
+          </a>
+          <button>
+            <img src="/homepage/svg/click.svg" alt="click" />
+            <p>Order Sekarang</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Themes -->
+  <!-- Contact -->
+  <div class="contact">
+    <%- include('textTheme', 
+    {hastag:'Contact', 
+    heading:'Kenalan yuk!', 
+    subheading:'Masih memiliki berbagai pertanyaan terkait kami? Hubungi kami secara langsung melalui kontak berikut!', 
+    alpha:"alpha"})
+    %>
+    <button>
+      <img src="/homepage/svg/whatsApp_Alpha.svg" alt="WhatsApp"/>
+      <p>Hubungi Kami</p>
+    </button>
+  </div>
+  <!-- Contact -->
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-section ex">
+        <img src="/homepage/svg/logo-horizontal.svg" alt="logo" />
+        <p>Temukan keindahan sejati website undangan digital anda hanya di weddingweb. Semua orang bisa nikah keren!</p>
+      </div>
+      <div class="footer-section">
+        <span>Navigate</span>
+        <a href="/">
+          <p>Home</p>
+        </a>
+        <a href="/">
+          <p>Favorite</p>
+        </a>
+        <a href="/">
+          <p>Features</p>
+        </a>
+        <a href="/">
+          <p>Themes</p>
+        </a>
+      </div>
+      <div class="footer-section">
+        <span>Others</span>
+        <a href="/">
+          <p>Best Theme</p>
+        </a>
+        <a href="/">
+          <p>Favorite Theme</p>
+        </a>
+        <a href="/">
+          <p>Special Offers</p>
+        </a>
+        <a href="/">
+          <p>Donate</p>
+        </a>
+      </div>
+      <div class="footer-section">
+        <span>Media Social</span>
+        <a href="/">
+          <img src="/homepage/svg/instagram.svg" alt="" />
+          <p>@weddingweb.id</p>
+        </a>
+        <a href="/">
+          <img src="/homepage/svg/whatsapp_roll.svg" alt="" />
+          <p>+62 8956-2277-1393</p>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="/utils/countdown.min.js"></script>
+<script src="/homepage/script.js"></script>
+</html>
