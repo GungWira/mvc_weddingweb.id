@@ -5,6 +5,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
+  scroll-behavior: smooth;
 }
 main{
   max-width: 576px;
