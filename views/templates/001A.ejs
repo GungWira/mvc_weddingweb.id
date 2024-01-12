@@ -263,42 +263,6 @@
       </div>
     </div>
     <!-- GALERY -->
-    <!-- RESERVASI -->
-    <div class="reservasi">
-      <div class="container">
-        <div class="main-title-template" data-aos="fade-up" data-aos-duration="600">
-          <img src="../templates/001A/svg/Head.svg" alt="" class="head">
-          <p class="main-title">Sweet Word</p>
-          <img src="../templates/001A/svg/Line.svg" alt="" class="line">
-          <p class="sub-title">Ucapan Selamat</p>
-        </div>
-        <p class="sambutan" data-aos="fade" data-aos-duration="600">
-          Berikan ucapan selamat dan rasa bahagiamu atas pernikahan Aditya dan Isabella melalui kolom berikut ini. Seluruh ucapan
-          selamat akan secara langsung muncul di layar
-        </p>
-        <form id="form" class="upContainer" data-aos="fade-up" data-aos-duration="800">
-          <input type="text" placeholder="Nama anda" name="name" required>
-          <input type="text" placeholder="Asal anda" name="address" required>
-          <textarea name="message" id="" placeholder="Ucapan selamat" required></textarea>
-          <button type="submit">Kirim Ucapan</button>
-          <input type="hidden" name="id" value="<%= id %>">
-        </form>
-        <div class="box-text" data-aos="fade-up" data-aos-duration="600">
-          
-          <% data.forEach(chat=> { %>
-          <div class="item-text">
-            <img src="../templates/001A/svg/Letter.svg" alt="">
-            <div class="content-text">
-              <span><%= chat.name  %></span>
-              <p><%= chat.message %></p>
-            </div>
-          </div>
-          <% }) %>
-          
-        </div>
-      </div>
-    </div>
-    <!-- RESERVASI -->
     <!-- GIFT -->
     <div class="gift">
       <div class="container">
@@ -345,6 +309,42 @@
       </div>
     </div>
     <!-- GIFT -->
+    <!-- RESERVASI -->
+    <div class="reservasi">
+      <div class="container">
+        <div class="main-title-template" data-aos="fade-up" data-aos-duration="600">
+          <img src="../templates/001A/svg/Head.svg" alt="" class="head">
+          <p class="main-title">Sweet Word</p>
+          <img src="../templates/001A/svg/Line.svg" alt="" class="line">
+          <p class="sub-title">Ucapan Selamat</p>
+        </div>
+        <p class="sambutan" data-aos="fade" data-aos-duration="600">
+          Berikan ucapan selamat dan rasa bahagiamu atas pernikahan Aditya dan Isabella melalui kolom berikut ini. Seluruh ucapan
+          selamat akan secara langsung muncul di layar
+        </p>
+        <form id="form" class="upContainer" data-aos="fade-up" data-aos-duration="800">
+          <input type="text" placeholder="Nama anda" name="name" required>
+          <input type="text" placeholder="Asal anda" name="address" required>
+          <textarea name="message" id="" placeholder="Ucapan selamat" required></textarea>
+          <button type="submit">Kirim Ucapan</button>
+          <input type="hidden" name="id" value="<%= id %>">
+        </form>
+        <div class="box-text" data-aos="fade-up" data-aos-duration="600">
+          
+          <% data.forEach(chat=> { %>
+          <div class="item-text">
+            <img src="../templates/001A/svg/Letter.svg" alt="">
+            <div class="content-text">
+              <span><%= chat.name  %></span>
+              <p><%= chat.message %></p>
+            </div>
+          </div>
+          <% }) %>
+          
+        </div>
+      </div>
+    </div>
+    <!-- RESERVASI -->
     <!-- FOOTER -->
     <footer>
       <div class="container">
