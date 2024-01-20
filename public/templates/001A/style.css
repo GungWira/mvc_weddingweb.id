@@ -646,6 +646,24 @@ button.music img{
   font-size: 14px;
   margin-top: 8px;
 }
+.kehadiran{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  margin: 12px 0;
+}
+.kehadiran .cover_kehadiran{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.reservasi .container .kehadiran .cover_kehadiran input{
+  width: unset;
+}
 /* RESERVASI */
 /* GIFT */
 .gift{

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../templates/001A/style.css">
   <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="../utils/aos.css">
   <title>White Serenity Template | Weddingweb.id</title>
 </head>
 <body>
@@ -263,14 +263,43 @@
       </div>
     </div>
     <!-- GALERY -->
+    <!-- RSPV -->
+    <div class="reservasi">
+      <div class="container">
+        <div class="main-title-template" data-aos="fade-up" data-aos-duration="600">
+          <img src="../templates/001A/svg/Head.svg" alt="" class="head">
+          <p class="main-title">Confirm Attedance</p>
+          <img src="../templates/001A/svg/Line.svg" alt="" class="line">
+          <p class="sub-title">Konfirmasi Kehadiran</p>
+        </div>
+        <p class="sambutan" data-aos="fade" data-aos-duration="600">Merupakan sebuah kehormatan besar bagi kami bila Anda berkenan untuk hadir pada acara kami. Silahkan isi konfirmasi kehadiran pada form dibawah ini</p>
+        <form id="rspv" class="upContainer" data-aos="fade-up" data-aos-duration="800">
+          <input type="text" placeholder="Nama anda" name="name" required>
+          <input type="text" placeholder="Asal anda" name="address" required>
+          <div class="kehadiran">
+            <div class="cover_kehadiran">
+              <input type="radio" name="rspv_list" id="hadir">
+              <label for="hadir">Saya bersedia untuk hadir</label>
+            </div>
+            <div class="cover_kehadiran">
+              <input type="radio" name="rspv_list" id="tidak_hadir">
+              <label for="tidak_hadir">Maaf, Saya belum bisa hadir</label>
+            </div>
+          </div>
+          <button type="submit">Konfirmasi Via WA</button>
+          <input type="hidden" name="id" value="<%= id %>">
+        </form>
+      </div>
+    </div>
+    <!-- RSPV -->
     <!-- GIFT -->
     <div class="gift">
       <div class="container">
         <div class="main-title-template alpa" data-aos="fade-up" data-aos-duration="600">
           <img src="../templates/001A/svg/Head-Alpa.svg" alt="" class="head">
-          <p class="main-title">Sweet Word</p>
+          <p class="main-title">Blezing Gift</p>
           <img src="../templates/001A/svg/Line-Alpa.svg" alt="" class="line">
-          <p class="sub-title">Ucapan Selamat</p>
+          <p class="sub-title">Kirim Hadiah</p>
         </div>
         <p class="sambutan" data-aos="fade-up" data-aos-duration="600">
           Terimakasih untuk hadiah spesial yang Anda berikan kepada pasangan kami!
@@ -366,20 +395,14 @@
     </footer>
     <!-- FOOTER -->
   </main>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="../templates/001A/util/snow/script.js"></script>
+  <script src="../utils/aos.js"></script>
+  <script src="../templates/001A/script.js"></script>
   <script>
-    const lenis = new Lenis()
-      function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-      }
-      requestAnimationFrame(raf)
-      AOS.init();
+    AOS.init()
   </script>
-  <!-- <script src="../templates/001A/script.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> -->
+  <!-- <script src="../templates/001A/util/snow/script.js"></script> -->
 </body>
 </html>

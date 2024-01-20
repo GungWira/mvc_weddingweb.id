@@ -1,0 +1,701 @@
+/* SETUP */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  /* scroll-behavior: smooth; */
+}
+main{
+  max-width: 576px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  overflow-x: hidden;
+  margin-bottom: 100px;
+}
+body{
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+#snow-animation-container{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.upContainer{
+  position: relative;
+  z-index: 2;
+}
+button.music{
+  display: flex;
+  position: fixed;
+  bottom: 32px;
+  right: 20px;
+  z-index: 100;
+  height: 64px;
+  width: 64px;
+  background-color: transparent;
+  animation: rotating infinite 8s linear;
+}
+.bg-full{
+  background-image: url(./img/Background.png);
+  background-size: cover;
+  background-position: bottom center;
+}
+@keyframes rotating {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+button.music img{
+  width: 100%;
+}
+/* SETUP */
+/* FONT */
+@font-face {
+  font-family: "GreyQO";
+  src: url(./fonts/GreyQo/GreyQo-Regular.ttf);
+}
+@font-face {
+  font-family: "Allura";
+  src: url(./fonts/Allura/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "Irish";
+  src: url(./fonts/IrishGrover/IrishGrover-Regular.ttf);
+}
+@font-face {
+  font-family: "Kaisei";
+  src: url(./fonts/KaiseiHarunoUmi/KaiseiHarunoUmi-Regular.ttf);
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url(./fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+/* FONT */
+/* COVER */
+.hero-section{
+  width: 100%;
+  height: 100vh;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 24px;
+  width: 100%;
+  height: 100%;
+}
+.hero-section .container{
+  justify-content: center;
+  /* margin-top: 5vh; */
+  align-items: center;
+}
+.hero-section .container .box-hero-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
+  position: relative;
+  z-index: 2;
+}
+.hero-section .container .box-hero-section span{
+  font-family: "Kaisei";
+  color: #106327;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.hero-section .container .box-hero-section .main-hero{
+  font-family: "Allura";
+  color: #106327;
+  font-size: 64px;
+}
+.hero-section .container .box-hero-section .main-hero span{
+  font-size: 20px;
+}
+.hero-section .container .box-hero-section .sub-text{
+  font-family: "Kaisei";
+  color: #106327;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.hero-section .container img{
+  width: 80%;
+}
+/* COVER */
+/* INTRODUCTION */
+.colour{
+  background-color: #267972;
+  padding: 40px 0;
+}
+.introduction{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.introduction .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.introduction .container img{
+  width: 50%;
+  margin-bottom: 24px;
+}
+.introduction .container .text-introduction{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  gap: 8px;
+}
+.introduction .container .text-introduction img:nth-child(1){
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 40px;
+  height: auto;
+  margin-bottom: 0;
+}
+.introduction .container .text-introduction img:last-child{
+  display: flex;
+  justify-self: flex-end;
+  align-self: flex-end;
+  width: 40px;
+  height: auto;
+  margin-bottom: 0;
+}
+.introduction .container .text-introduction p{
+  color: white;
+  font-size: 12px;
+  font-family: Kaisei;
+  opacity: .8;
+  text-align: center;
+}
+/* INTRODUCTION */
+/* BNG */
+.bng{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+}
+.fill{
+  background-color: #FEFEFE;
+  padding: 32px 24px;
+  border: 12px;
+  border-radius: 12px;
+}
+.bng .container{
+  justify-content: center;
+  align-items: center;
+}
+.bng .container .salam{
+  width: 80%;
+  margin-bottom: 24px;
+}
+.bng .container span{
+  font-family: Kaisei;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #191919;
+}
+.bng .container p{
+  font-family: Kaisei;
+  font-size: 12px;
+  color: #191919;
+  opacity: .8;
+  text-align: center;
+}
+.bng .container img{
+  width: 75%;
+  margin: 24px 0;
+}
+
+/* BNG */
+/* COUNTDOWN */
+.countdown{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+}
+.countdown .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-title-template{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-title-template .head{
+  width: 50vw;
+  margin-bottom: 0px;
+}
+.main-title-template .main-title{
+  font-family: "Inknut";
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main-title-template.alpha .main-title{
+  color: #191919;
+  opacity: .8;
+}
+.main-title-template .sub-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  margin-top: 24px;
+  color: #FEFEFE;
+  opacity: .8;
+}
+.main-title-template.alpha .sub-title{
+  color: #191919;
+  opacity: .8;
+  margin-bottom: 24px;
+}
+.countdown .container .box-time{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-top: 40px;
+}
+.countdown .container .box-time .item-time{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color:  #185752;
+  border-radius: 4px;
+}
+.countdown .container .box-time .item-time p{
+  font-family: "Kaisei";
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.countdown .container .box-time .item-time span{
+  position: absolute;
+  bottom: 8px;
+  font-size: 12px;
+  color: #FEFEFE;
+}
+/* COUNTDOWN */
+/* EVENT */
+.event{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+}
+.item-event{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item-event .title{
+  font-size: 28px;
+  color: #191919;
+  opacity: .9;
+  margin-bottom: 24px;
+}
+.item-event p{
+  font-size: 14px;
+  color: #191919;
+  opacity: .8;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+.item-event span{
+  font-size: 40px;
+  font-weight: bold;
+  margin: 8px 0;
+  line-height: 36px;
+}
+/* EVENT */
+
+/* LOVE STORY */
+/* LOVE STORY */
+.love_story{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.love_story .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.love_story .container .card-love-story{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 32px;
+  width: 100%;
+}
+.love_story .container .card-love-story .head-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  width: 100%;
+  background-position: center;
+  position: relative;
+  border: none;
+}
+.love_story .container .card-love-story .head-card::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #191919;
+  opacity: .5;
+  z-index: 2;
+}
+.love_story .container .card-love-story .head-card p{
+  position: relative;
+  z-index: 3;
+  color: white;
+  font-size: 24px;
+}
+.love_story .container .card-love-story .head-card span{
+  font-size: 12px;
+  color: whitesmoke;
+  margin-top: 8px;
+  position: relative;
+  z-index: 3;
+  opacity: .7;
+}
+.love_story .container .card-love-story .body-card{
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+.love_story .container .card-love-story .body-card p{
+  font-family: Kaisei;
+  font-size: 12px;
+  color: #191919;
+  /* opacity: .9; */
+  text-indent: 16px;
+}
+/* LOVE STORY */
+/* GALLERY */
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background-image: url(./img/gallery-1.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.gallery::before{
+  width: 100%;
+  height: 100%;
+  background-color: #191919;
+  opacity: .6;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.gallery .container{
+  position: relative;
+  z-index: 3;
+}
+
+/* GALLERY */
+/* RESERVASI */
+.reservasi{
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px;
+  background-image: url(./img/Background.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+.reservasi .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reservasi .container form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.reservasi .container form input{
+  width: 100%;
+  padding: 8px 12px;
+  font-family: "Kaisei";
+  color: #181818;
+  border-radius: 2px;
+  background-color: #e5e6e5;
+}
+.reservasi .container form textarea{
+  width: 100%;
+  height: 120px;
+  padding: 8px 12px;
+  font-family: "Kaisei";
+  font-size: 14px;
+  background-color: #e5e6e5;
+}
+.reservasi .container form button{
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #185752;
+  border-radius: 4px;
+  font-family: "Kaisei";
+  color: white;
+  font-size: 14px;
+}
+.box-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+.box-text .item-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  border-bottom: 1px solid whitesmoke;
+  padding: 12px 0;
+}
+.box-text .item-text img{
+  height: 32px;
+}
+.box-text .item-text span{
+  font-family: "Kaisei";
+  font-size: 16px;
+}
+.box-text .item-text p{
+  font-family: "Kaisei";
+  font-size: 14px;
+  margin-top: 8px;
+}
+.kehadiran{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  margin: 12px 0;
+}
+.kehadiran .cover_kehadiran{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.reservasi .container .kehadiran .cover_kehadiran input{
+  width: unset;
+}
+.reservasi .container.khusus{
+  padding: 0;
+  margin-top: 32px;
+}
+.reservasi .container.khusus .box-text{
+  background-color: #FEFEFE;
+}
+/* RESERVASI */
+/* GIFT */
+.gift{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+}
+.gift .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .alpa p{
+  color: white;
+}
+.gift .option{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.gift .option p.main{
+  font-family: "Kaisei";
+  font-size: 16px;
+  color: white;
+}
+.gift .option p.sub-main{
+  margin-bottom: 8px;
+}
+.gift .option p{
+  font-family: "Kaisei";
+  font-size: 14px;
+  color: whitesmoke;
+}
+.gift .option .box-option{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.gift .option .box-option .rekening{
+  display: flex;
+  flex-direction: column;
+  min-width: calc(100% / 2);
+}
+.gift .option .box-option .rekening .no-rekening{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
+.gift .option .box-option .rekening .no-rekening button{
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gift .option .box-option .rekening .no-rekening button image{
+  height: 16px;
+}
+.gift .option a{
+  color: whitesmoke;
+  font-family: "Kaisei";
+  font-size: 14px;
+}
+/* GIFT */
+/* FOOTER */
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+}
+footer .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .logo{
+  margin-bottom: 16px;
+}
+footer .container p{
+  font-family: "Kaisei";
+  color: #181818;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+footer .container .sosial-media{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+footer .container .sosial-media a{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .sosial-media a img{
+  height: 16px;
+}
+footer .container .sosial-media a p{
+  margin-bottom: 0;
+}
+/* FOOTER */
