@@ -21,7 +21,7 @@ main{
   margin-bottom: 100px;
 }
 body{
-  max-width: 100vw;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +90,13 @@ button.music img{
   font-family: "Quicksand";
   src: url(./fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "Inknut";
+  src: url(./fonts/Inknut/InknutAntiqua-Regular.ttf);
+}
+p,a,span{
+  font-family: "Kaisei";
+}
 /* FONT */
 /* COVER */
 .hero-section{
@@ -124,13 +131,13 @@ button.music img{
 }
 .hero-section .container .box-hero-section span{
   font-family: "Kaisei";
-  color: #69346B;
+  color: #106327;
   font-size: 16px;
   margin-bottom: 4px;
 }
 .hero-section .container .box-hero-section .main-hero{
   font-family: "Allura";
-  color: #69346B;
+  color: #106327;
   font-size: 64px;
 }
 .hero-section .container .box-hero-section .main-hero span{
@@ -138,7 +145,7 @@ button.music img{
 }
 .hero-section .container .box-hero-section .sub-text{
   font-family: "Kaisei";
-  color: #69346B;
+  color: #106327;
   font-size: 14px;
   margin-bottom: 8px;
 }
@@ -167,7 +174,7 @@ button.music img{
   width: 100%;
 }
 .introduction .container img{
-  width: 50%;
+  width: 30%;
   margin-bottom: 24px;
 }
 .introduction .container .text-introduction{
@@ -218,15 +225,24 @@ button.music img{
   align-items: center;
 }
 .bng .container .salam{
-  width: 80%;
+  width: 70%;
   margin-bottom: 24px;
 }
 .bng .container span{
-  font-family: Kaisei;
-  font-weight: bold;
-  font-size: 18px;
+    font-family: "Inknut";
+  font-size: 16px;
   text-align: center;
   color: #191919;
+  line-height: 28px;
+}
+.bng .container span:nth-of-type(3),
+.bng .container span:nth-of-type(5){
+  font-family: Kaisei;
+  font-size: 12px;
+  color: #191919;
+  opacity: .8;
+  text-align: center;
+  margin-top: 8px;
 }
 .bng .container p{
   font-family: Kaisei;
@@ -236,7 +252,7 @@ button.music img{
   text-align: center;
 }
 .bng .container img{
-  width: 75%;
+  width: 55%;
   margin: 24px 0;
 }
 
@@ -263,12 +279,12 @@ button.music img{
   align-items: center;
 }
 .main-title-template .head{
-  width: 50vw;
+  width: 50%;
   margin-bottom: 0px;
 }
 .main-title-template .main-title{
   font-family: "Inknut";
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 12px;
   text-transform: uppercase;
   color: #fff;
@@ -310,7 +326,7 @@ button.music img{
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color:  #69346B;
+  background-color:  #185752;
   border-radius: 4px;
 }
 .countdown .container .box-time .item-time p{
@@ -333,6 +349,10 @@ button.music img{
   align-items: center;
   padding: 40px 24px;
 }
+.event .container{
+  justify-content: center;
+  align-items: center;
+}
 .item-event{
   display: flex;
   flex-direction: column;
@@ -340,10 +360,11 @@ button.music img{
   align-items: center;
 }
 .item-event .title{
-  font-size: 28px;
+  font-family: "Inknut";
+  font-size: 18px;
   color: #191919;
   opacity: .9;
-  margin-bottom: 24px;
+  font-weight: lighter;
 }
 .item-event p{
   font-size: 14px;
@@ -354,7 +375,7 @@ button.music img{
   line-height: 24px;
 }
 .item-event span{
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
   margin: 8px 0;
   line-height: 36px;
@@ -516,7 +537,7 @@ button.music img{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #69346B;
+  background-color: #185752;
   border-radius: 4px;
   font-family: "Kaisei";
   color: white;
