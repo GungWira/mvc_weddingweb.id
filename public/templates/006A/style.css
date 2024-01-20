@@ -131,13 +131,13 @@ p,a,span{
 }
 .hero-section .container .box-hero-section span{
   font-family: "Kaisei";
-  color: #106327;
+  color: #69346B;
   font-size: 16px;
   margin-bottom: 4px;
 }
 .hero-section .container .box-hero-section .main-hero{
   font-family: "Allura";
-  color: #106327;
+  color: #69346B;
   font-size: 64px;
 }
 .hero-section .container .box-hero-section .main-hero span{
@@ -145,7 +145,7 @@ p,a,span{
 }
 .hero-section .container .box-hero-section .sub-text{
   font-family: "Kaisei";
-  color: #106327;
+  color: #69346B;
   font-size: 14px;
   margin-bottom: 8px;
 }
@@ -326,7 +326,7 @@ p,a,span{
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color:  #185752;
+  background-color:  #69346B;
   border-radius: 4px;
 }
 .countdown .container .box-time .item-time p{
@@ -537,7 +537,7 @@ p,a,span{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #185752;
+  background-color: #69346B;
   border-radius: 4px;
   font-family: "Kaisei";
   color: white;
