@@ -148,7 +148,9 @@ button.music img{
 /* COVER */
 /* INTRODUCTION */
 .colour{
-  background-color: #267972;
+  background-image: url(./img/sec_background.png);
+  background-size: cover;
+  background-position: center;
   padding: 40px 0;
 }
 .introduction{
