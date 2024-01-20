@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
           },
           body: JSON.stringify(data)
       }
-      const promise = fetch('/template/003A', options); // inget ubah database
+      const promise = fetch('/template/007A', options); // inget ubah database
       promise.then(response => {
           if(!response.ok){
               console.error(response)
