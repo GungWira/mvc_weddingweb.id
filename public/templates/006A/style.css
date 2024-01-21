@@ -57,6 +57,17 @@ button.music{
   background-size: cover;
   background-position: bottom center;
 }
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  transition: 0.7s ease;
+  transform: translateY(0%);
+  max-width: 500px;
+}
 @keyframes rotating {
   0%{
     transform: rotate(0);
@@ -106,6 +117,25 @@ p,a,span{
   background-size: cover;
   position: relative;
 }
+.hero img{
+  transition: .7s;
+  transition-delay: 1s;
+  opacity: 0;
+  transform: translateY(-30%);
+}
+.hero .main-hero,
+.hero span{
+  transition: .7s;
+  transition-delay: 1.7s;
+  opacity: 0;
+  transform: (translateY(30%));
+}
+.hero .sub-text {
+  transition: .7s;
+  transition-delay: 2.4s;
+  opacity: 0;
+  transform: (translateY(30%));
+}
 .container{
   display: flex;
   flex-direction: column;
@@ -149,6 +179,25 @@ p,a,span{
   font-size: 14px;
   margin-bottom: 8px;
 }
+.hero-section .container .box-hero-section .sub-bold{
+  font-weight: bold;
+  font-size: 20px;
+}
+.hero-section .container .box-hero-section button{
+  padding: 12px 32px;
+  border-radius: 6px;
+  background-color: #69346B;
+  color: white;
+  font-family: "Kaisei";
+  font-size: 14px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
 .hero-section .container img{
   width: 80%;
 }
@@ -165,6 +214,8 @@ p,a,span{
   width: 100%;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .introduction .container{
   display: flex;
@@ -489,7 +540,91 @@ p,a,span{
   position: relative;
   z-index: 3;
 }
+.box-gallery{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 24px;
+}
+.box-gallery .collum-gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  width: calc(50% - 8px);
+}
+.box-gallery img{
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+}
 
+.gallery-zoom{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -100;
+  background-color: rgba(19, 19, 19, 0.7);
+  top: 0;
+  left: 0;
+  padding: 32px 12px;
+  justify-content: center;
+  opacity: 0;
+}
+#exit-zoom{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-end;
+  width: 40px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#exit-zoom img{
+  width: 50%;
+}
+.gallery-zoom .core-zoom{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-zoom .core-zoom img{
+  width: 100%;
+}
+.gallery-zoom .navigation-zoom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: calc(100vw - 12px);
+  justify-self: center;
+  align-self: center;
+}
+.gallery-zoom .navigation-zoom button{
+  background-color: rgba(245, 245, 245, 0.425);
+  border: none;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+}
+.gallery-zoom .navigation-zoom button img{
+  width: 55%;
+}
 /* GALLERY */
 /* RESERVASI */
 .reservasi{
