@@ -113,7 +113,7 @@ button.music img {
   margin-bottom: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid whitesmoke;
-  width: 50%;
+  width: 100%;
   text-wrap: nowrap;
   display: flex;
   justify-content: center;
@@ -179,7 +179,7 @@ button.music img {
   margin-top: 12px;
 }
 .homepage .background .hero-name{
-  width: calc(70%);
+  width: calc(60%);
   z-index: 3;
   margin-top: 50%;
   opacity: 0;
@@ -236,7 +236,7 @@ button.music img {
   transition-delay: 2.5s;
 }
 .text-homepage .text-area .title{
-  font-size: 16vw;
+  font-size: 56px;
   font-family: "Christmash";
   color: #181818;
   opacity: 0;
@@ -409,7 +409,7 @@ button.music img {
 .bng .container .box-bng .bng-detail span{
   font-family: "Crimson";
   color: white;
-  font-size: 28px;
+  font-size: 24px;
   margin-top: 12px;
   margin-bottom: 4px;
 }
