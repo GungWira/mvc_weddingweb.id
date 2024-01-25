@@ -220,16 +220,15 @@ button.music img {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  background-color: white;
   width: 100%;
   padding: 24px;
   padding-top: 12px;
-  padding-bottom: 48px;
+  padding-bottom: 25%;
 }
 .text-homepage .text-area span{
   font-family: "Kaisei";
   font-size: 18px;
-  color: #181818;
+  color: whitesmoke;
   opacity: .95;
   margin-bottom: -8px;
   transition: 0.7s;
@@ -238,7 +237,7 @@ button.music img {
 .text-homepage .text-area .title{
   font-size: 56px;
   font-family: "Christmash";
-  color: #181818;
+  color: white;
   opacity: 0;
   transition: 0.7s;
   transition-delay: 3s;
@@ -247,6 +246,7 @@ button.music img {
   opacity: 0;
   transition: 0.7s;
   transition-delay: 4s;
+  color: whitesmoke;
 }
 .normal-text{
   font-family: "Kaisei";
@@ -266,8 +266,10 @@ button.music img {
   align-items: center;
   position: relative;
   width: 100%;
-  top: -12px;
   background-color: white;
+}
+.introduction .trikas-normal.rotate.abs{
+  bottom: 12px;
 }
 .container{
   display: flex;
@@ -443,6 +445,7 @@ button.music img {
 .timeline .container{
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 .title_theme{
   display: flex;
@@ -461,90 +464,62 @@ button.music img {
   font-family: "Cherolina";
   font-size: 32px;
 }
-.timeline .container .card-timeline{
+.img-section-timeline{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 24px;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 32px;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
-}
-.timeline .container .card-timeline .head{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  aspect-ratio: 4 / 2;
-}
-.timeline .container .card-timeline .head .head-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  overflow: visible;
   position: relative;
 }
-.timeline .container .card-timeline .head .head-img::before{
-  position: absolute;
-  z-index: 2;
-  background-color: rgba(12, 12, 12, 0.6);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  content: "";
+.img-section-timeline.top{
+ left: -64px;
+ padding-bottom: 24px;
 }
-.timeline .container .card-timeline .head .head-img img{
-  width: 100%;
-  object-fit: cover;
+.img-section-timeline.bottom {
+  left: -128px;
+  padding-top: 24px;
 }
-.timeline .container .card-timeline .head .head-text{
+.img-section-timeline img{
+  width: calc(70%);
+}
+.detail-timeline{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  position: absolute;
-  z-index: 4;
-}
-.timeline .container .card-timeline .head .head-text span{
-  font-family: "Crimson";
-  font-size: 32px;
-  color: whitesmoke;
-}
-.timeline .container .card-timeline .head .head-text p{
-  color: whitesmoke;
-  font-family: "Cherolina";
-  font-size: 28px;
-  opacity: .9;
-}
-.timeline .container .card-timeline .body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 8px;
+  padding: 0 24px;
+  margin-top: 32px;
 }
-.timeline .container .card-timeline .body p{
-  text-align: center;
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-family: "Kaisei";
-}
-.timeline .container .card-timeline .body span{
-  font-family: "Kaisei";
+.detail-timeline .head{
+  color: #0C0C0C;
+  font-family: "Crimson";
   font-size: 20px;
-  text-align: center;
-  margin-bottom: 8px;
 }
-.timeline .container .card-timeline .body button{
-  padding: 12px 32px;
-  border-radius: 4px;
-  color: whitesmoke;
+.detail-timeline .sub{
+  color: #484343;
   font-family: "Kaisei";
-  font-size: 14px;
-  background-color: #9C7134;
+  font-size: 12px;
+}
+.detail-timeline span{
+  color: #191919;
+  font-family: "Kaisei";
+  font-size: 12px;
+}
+.detail-timeline button{
+  padding: 8px 32px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background-color: transparent;
+  border: 1px solid #9C7134;
+  font-family: "Kaisei";
+  font-size: 12px;
+  color: #9C7134;
 }
 /* TIMELINE */
 /* COUNTDOWN */
@@ -638,6 +613,12 @@ button.music img {
 .title_theme.white p{
   color: white;
 }
+.title_theme.beige span{
+  color: #A68C67;
+}
+.title_theme.beige p{
+  color: #D0BDA0;
+}
 /* COUNTDOWN */
 /* LOVE STORY */
 .love-story{
@@ -646,9 +627,7 @@ button.music img {
   justify-content: center;
   align-items: center;
   padding: 40px 0;
-  background-image: url(./img/Background.png);
-  background-size: cover;
-  background-position: center;
+background-color: #1D1D1B;
 }
 .love-story .container{
   display: flex;
@@ -679,6 +658,7 @@ button.music img {
 }
 .love-story .box-love-story .cover-love-story img{
   width: 100%;
+  margin-bottom: 20px;
 }
 .love-story .box-love-story .cover-love-story .title-love-story{
   font-family: Kaisei;
@@ -687,6 +667,7 @@ button.music img {
   margin-top: 8px;
   position: relative;
   z-index: 3;
+  color: #DFC8A6;
 }
 .love-story .box-love-story .cover-love-story span{
   font-family: "Kaisei";
@@ -694,6 +675,7 @@ button.music img {
   opacity: .6;
   margin-bottom: 8px;
   margin-top: 4px;
+  color: #9B8E7B;
 }
 .love-story .box-love-story .cover-love-story .normal-love-story{
   font-family: "Kaisei";
@@ -702,20 +684,13 @@ button.music img {
   margin-bottom: 8px;
   position: relative;
   z-index: 3;
+  color: #D0BDA1;
 }
-.love-story .box-love-story .cover-love-story .hiasan{
+.box-love-story .cover-love-story img.img_border_ls{
   position: absolute;
-  z-index: 2;
-}
-.love-story .box-love-story .cover-love-story .hiasan1,
-.love-story .box-love-story .cover-love-story .hiasan3{
-  right: 0;
-  top: 10%;
-}
-.love-story .box-love-story .cover-love-story .hiasan2,
-.love-story .box-love-story .cover-love-story .hiasan4{
-  left: 0;
-  top: -20%;
+  top: 12px;
+  left: 32px;
+  width: calc(100% - 48px);
 }
 /* LOVE STORY */
 /* LIVE */
@@ -729,6 +704,7 @@ button.music img {
   background-position: center;
   position: relative;
   flex-direction: column;
+  padding-top: 64px;
 }
 .live .trikas-normal{
   top: -12px;
