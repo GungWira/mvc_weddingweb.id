@@ -754,9 +754,9 @@ background-color: #1D1D1B;
   align-items: center;
 }
 .live .container .item-live .title span{
-  font-family: "Allura";
-  color: #C18742;
-  font-size: 28px;
+  font-family: "Kaisei";
+  color: whitesmoke;
+  font-size: 20px;
 }
 .live .container .item-live p{
   font-family: "Kaisei";
