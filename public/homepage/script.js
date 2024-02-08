@@ -1,3 +1,4 @@
+phone = 62895622771393
 // Navitarion Move
 const nav = document.querySelector("nav")
 var prevY = 0
@@ -23,6 +24,25 @@ buttonHam.addEventListener("click", function(){
 navbarMobile.addEventListener("click", function(){
   navbarMobile.classList.replace("active", "nonActive")
   
+})
+// Navigation Page
+const allButtonNav = document.querySelectorAll("nav .container .cover-navbar .mid-navbar .navbarLink")
+allButtonNav.forEach((btn)=>{
+  btn.addEventListener("click", ()=>{
+    var header = btn.dataset.header
+    console.log(header)
+    var element = document.querySelector(header)
+    element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+  })
+})
+const allButtonNavMob = document.querySelectorAll(".mobileNav .navbarLink")
+allButtonNavMob.forEach((btn)=>{
+  btn.addEventListener("click", ()=>{
+    var header = btn.dataset.header
+    console.log(header)
+    var element = document.querySelector(header)
+    element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+  })
 })
 // Feature
 const items = document.querySelectorAll(".items-feature .item")
@@ -63,14 +83,48 @@ const second = document.querySelector(".second p")
 
 var units = countdown.DEFAULTS
 const year = 2024,
-      month = 0, // Januari  = 0
-      date = 1
+      month = 1, // Januari  = 0
+      date = 9
 
 var start = new Date(year, month, date, 0, 0, 0)
-setInterval(()=>{
-  var ts = countdown(start, null)
-  day.innerHTML = ts.days
-  hour.innerHTML = ts.hours
-  minute.innerHTML = ts.minutes
-  second.innerHTML = ts.seconds
-}, 1000)
+
+var today = new Date();
+var dd = today.getDate()
+var mm = today.getMonth() + 1
+var yyyy = today.getFullYear();
+
+if(dd - date >= 0 && mm - month >= 0){
+  day.innerHTML = 0
+  hour.innerHTML = 0
+  minute.innerHTML = 0
+  second.innerHTML = 0
+}else{
+  setInterval(()=>{
+    var ts = countdown(start, null)
+    day.innerHTML = ts.days
+    hour.innerHTML = ts.hours
+    minute.innerHTML = ts.minutes
+    second.innerHTML = ts.seconds
+  }, 1000)
+}
+
+// BUTTON ORDER
+const allBtnOrder = document.querySelectorAll(".card-theme button")
+allBtnOrder.forEach((btn)=>{
+  btn.addEventListener("click", (e)=>{
+    let id = e.target.dataset.templateId;
+    if(!id){
+      id = e.target.parentElement.dataset.templateId
+    }
+    var message = "Halo%20kak!%0ASaya%20tertarik%20dengan%20template%20undangan%20pernikahan%20digital%20ID%20"+id+"%20kak.%20Tolong%20diproses%20ya%20kak!%20"
+    document.location.href = "https://wa.me/"+phone+"?text="+message
+  })
+})
+
+const btnsOrderNow = document.querySelectorAll(".orderNow")
+btnsOrderNow.forEach((btn)=>{
+  btn.addEventListener("click", ()=>{
+    var message = "Halo%20kak!%0ASaya%20ingin%20tau%20lebih%20lanjut%20mengenai%20Weddingweb.id%2C%20apa%20bisa%20jelaskan%20lebih%20lanjut%20kepada%20saya%20kak%3F%20Terimakasih!"
+    document.location.href = "https://wa.me/"+phone+"?text="+message
+  })
+})

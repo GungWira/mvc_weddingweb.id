@@ -21,7 +21,13 @@ p,a,span{
   font-family: ManropeBold;
   src: url(/homepage/font/Manrope/Manrope-Bold.ttf);
 }
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 main{
+  max-width: 1440px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -107,7 +113,7 @@ nav .container .cover-navbar button img{
   width: 28px;
 }
 nav .container .cover-navbar a img{
-  width: 40px;
+  width: 46px;
 }
 nav .container .cover-navbar .mid-navbar .navbarLink{
   text-decoration: none;
@@ -115,6 +121,7 @@ nav .container .cover-navbar .mid-navbar .navbarLink{
   opacity: .5;
   transition: .5s ease;
   position: relative;
+  cursor: pointer;
 }
 nav .container .cover-navbar .mid-navbar .navbarLink:hover{
   opacity: .9;
@@ -308,6 +315,7 @@ button#ham img{
   align-items: center;
   padding: 64px 0;
   margin-top: 120px;
+  width: 100vw;
   background-color: #101010;
 }
 .about-page .container{
@@ -368,7 +376,7 @@ button#ham img{
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 120px;
-  max-width: 100vw;
+  max-width: 100%;
   overflow: hidden;
 }
 .text-theme{
@@ -592,6 +600,7 @@ button#ham img{
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-bottom: 32px;
 }
 .cover-themes h2{
   padding: 0 32px;
@@ -659,7 +668,7 @@ button#ham img{
 /* Contact */
 .contact{
   background-color: #101010;
-  width: 100%;
+  width: 100vw;
   margin-top: 120px;
   display: flex;
   align-items: center;

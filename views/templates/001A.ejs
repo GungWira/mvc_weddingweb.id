@@ -10,28 +10,36 @@
 </head>
 <body>
   <main>
-    <!-- SNOW -->
-    <div id="snow-animation-container"></div>
-    <!-- SNOW -->
+    <!-- COVER -->
+    <div class="hero-section bg-full" id="cover" style="background-image: url(../templates/001A/img/hero-cover.png);">
+      <div class="container">
+        <div class="box-hero-section">
+          <span>The Wedding of</span>
+          <p class="main-hero">Rai <span>&</span> Dewi</p>
+          <p class="sub-text">Turut mengundang :</p>
+          <span >Keluarga Besar Denpasar</span>
+          <button class="cover-btn">Buka Undangan</button>
+        </div>
+      </div>
+    </div>
+    <!-- COVER -->
     <!-- MUSIC SWITCH -->
     <button class="music musicOn">
-      <img src="../templates/001A/svg/Music.svg" alt="">
-      <!-- <audio controls autoplay loop>
+      <img src="../templates/001A/svg/MusicOn.svg" alt="">
+      <audio controls autoplay loop>
         <source src="../templates/001A/audio/Penjaga_Hati-Nadhif-Basalamah.mp3" type="audio/mpeg">
-      </audio> -->
+      </audio>
     </button>
     <!-- MUSIC SWITCH -->
     <!-- HERO -->
-    <div class="hero-section" style="background-image: url(../templates/001A/img/hero-cover.png);">
+    <div class="hero-section hero" style="background-image: url(../templates/001A/img/hero-cover.png);">
       <div class="container">
         <div class="box-hero-section">
           <span>The Wedding of</span>
           <p class="main-hero">Rai <span>&</span> Dewi</p>
           <p class="sub-text">Minggu 26 November 2023</p>
           <p class="sub-text">Ballroom Kuta Spot</p>
-          <a href="#konfirmasi">
-            <button>Konfirmasi Kehadiran</button>
-          </a>
+          <button>Konfirmasi Kehadiran</button>
         </div>
       </div>
     </div>
@@ -111,12 +119,6 @@
           saling tidak mengenal dan dipisahkan oleh kampus yang bahkan sangat berjauhan bisa sama sama mencintai satu sama
           lainnya?</p>
           <p class="normal-love-story">Yap kami berdua dipertemukan disebuah acara kunjungan kampus pada saat itu</p>
-          <div class="hiasan hiasan1">
-            <img src="../templates/001A/img/hias-1.png" alt="">
-          </div>
-          <div class="hiasan hiasan2">
-            <img src="../templates/001A/img/hias-2.png" alt="">
-          </div>
         </div>
         <div class="cover-love-story">
           <img src="../templates/001A/img/ls-2.png" alt="">
@@ -128,12 +130,6 @@
           permintaan tersebut</p>
           <p class="normal-love-story">Dan benarnya, buket bunga berwarna putih ditangan pria serta spanduk bertuliskan “May u be my gf” yang dipegang oleh
           temannya sungguh membuatku ingin tertawa sekaligus menangis. Dia adalah pria yang aku cari selama ini</p>
-          <div class="hiasan hiasan3">
-            <img src="../templates/001A/img/hias-3.png" alt="">
-          </div>
-          <div class="hiasan hiasan4">
-            <img src="../templates/001A/img/hias-4.png" alt="">
-          </div>
         </div>
         <div class="cover-love-story">
           <img src="../templates/001A/img/ls-3.png" alt="">
@@ -145,12 +141,6 @@
           aku sampaikan. Tapi siapa sangka, keesokan harinya dirinya datang bersama calon mertuaku guna melamar diriku menjadi
           istrinya</p>
           <p class="normal-love-story">“Sungguh pria yang gila, namun itulah yang membuatku begitu menyayanginya”</p>
-          <div class="hiasan hiasan1">
-            <img src="../templates/001A/img/hias-1.png" alt="">
-          </div>
-          <div class="hiasan hiasan2">
-            <img src="../templates/001A/img/hias-2.png" alt="">
-          </div>
         </div>
       </div>
     </div>
@@ -249,17 +239,35 @@
         </div>
         <div class="box-gallery">
           <div class="ts-gallery" data-aos="fade-up" data-aos-duration="600">
-            <img src="../templates/001A/img/galery.png" alt="">
-            <img src="../templates/001A/img/galery.png" alt="">
+            <img src="../templates/011A/img/gallery-2.png" alt="" class="img-1">
+            <img src="../templates/011A/img/gallery-1.png" alt="" class="img-2">
           </div>
           <div class="solo-gallery" data-aos="fade-up" data-aos-duration="600">
-            <img src="../templates/001A/img/galery.png" alt="">
+            <img src="../templates/011A/img/gallery-2.png" alt="" class="img-3">
           </div>
-          <div class="mix-gallery" data-aos="fade-up" data-aos-duration="600">
-            <img src="../templates/001A/img/galery.png" alt="" class="width">
-            <img src="../templates/001A/img/galery-2.png" alt="">
+          <div class="ts-gallery" data-aos="fade-up" data-aos-duration="600">
+            <img src="../templates/011A/img/gallery-3.png" alt="" class="img-4">
+            <img src="../templates/011A/img/gallery-4.png" alt="" class="img-5">
           </div>
         </div>
+      </div>
+    </div>
+    <div class="gallery-zoom">
+      <button id="exit-zoom">
+        <img src="../templates/011A/svg/Close.svg" alt="">
+      </button>
+      <div class="core-zoom">
+        <img src="../templates/011A/img/gallery-3.png" alt="" data-aos="fade" data-aos-duration="600" class="prev">
+        <img src="../templates/011A/img/gallery-1.png" alt="" data-aos="fade" data-aos-duration="600" class="center">
+        <img src="../templates/011A/img/gallery-2.png" alt="" data-aos="fade" data-aos-duration="600" class="next">
+      </div>
+      <div class="navigation-zoom">
+        <button id="prev-zoom">
+          <img src="../templates/011A/svg/Left.svg" alt="">
+        </button>
+        <button id="next-zoom">
+          <img src="../templates/011A/svg/Right.svg" alt="">
+        </button>
       </div>
     </div>
     <!-- GALERY -->
@@ -286,7 +294,7 @@
               <label for="tidak_hadir">Maaf, Saya belum bisa hadir</label>
             </div>
           </div>
-          <button type="submit">Konfirmasi Via WA</button>
+          <button type="button">Konfirmasi Via WA</button>
           <input type="hidden" name="id" value="<%= id %>">
         </form>
       </div>
@@ -351,7 +359,7 @@
           Berikan ucapan selamat dan rasa bahagiamu atas pernikahan Aditya dan Isabella melalui kolom berikut ini. Seluruh ucapan
           selamat akan secara langsung muncul di layar
         </p>
-        <form id="form" class="upContainer" data-aos="fade-up" data-aos-duration="800">
+        <form id="form" method="post" class="upContainer" data-aos="fade-up" data-aos-duration="800">
           <input type="text" placeholder="Nama anda" name="name" required>
           <input type="text" placeholder="Asal anda" name="address" required>
           <textarea name="message" id="" placeholder="Ucapan selamat" required></textarea>
@@ -359,7 +367,7 @@
           <input type="hidden" name="id" value="<%= id %>">
         </form>
         <div class="box-text" data-aos="fade-up" data-aos-duration="600">
-          
+          <% data.reverse() %>
           <% data.forEach(chat=> { %>
           <div class="item-text">
             <img src="../templates/001A/svg/Letter.svg" alt="">
@@ -395,14 +403,15 @@
     </footer>
     <!-- FOOTER -->
   </main>
+  <section class="desktop"></section>
+  <script src="https://maps.googleapis.com/maps/api/js?key='.GOOGLEMAPSKEY.'&callback=gmNoop"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
   <script src="../utils/aos.js"></script>
   <script src="../templates/001A/script.js"></script>
   <script>
     AOS.init()
   </script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> -->
-  <!-- <script src="../templates/001A/util/snow/script.js"></script> -->
 </body>
 </html>

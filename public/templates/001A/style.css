@@ -8,7 +8,7 @@
   /* scroll-behavior: smooth; */
 }
 main{
-  max-width: 576px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -19,12 +19,39 @@ main{
   position: relative;
   overflow-x: hidden;
 }
+@media screen and (min-width:476px) {
+  main{
+  max-width: 476px;
+  }
+}
 body{
   width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 100%;
+}
+.desktop{
+  background-color: rebeccapurple;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./img/ls-1.png);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.desktop::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #snow-animation-container{
   width: 100vw;
@@ -84,6 +111,13 @@ button.music img{
 }
 /* FONT */
 /* COVER */
+#cover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: .7s;
+}
 .hero-section{
   width: 100%;
   height: 100vh;
@@ -143,7 +177,7 @@ button.music img{
   font-size: 14px;
   margin-bottom: 8px;
 }
-.hero-section .container .box-hero-section a button{
+.hero-section .container .box-hero-section button{
   padding: 12px 32px;
   background-color: transparent;
   border: 1px solid whitesmoke;
@@ -152,6 +186,15 @@ button.music img{
   font-family: "Kaisei";
   color: whitesmoke;
   font-size: 14px;
+}
+.hero .container .box-hero-section span,
+.hero .container .box-hero-section .main-hero,
+.hero .container .box-hero-section .sub-text,
+.hero .container .box-hero-section button {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: .7s;
+  transition-delay: 1s;
 }
 /* COVER */
 /* COUNTDOWN */
@@ -179,7 +222,7 @@ button.music img{
   align-items: center;
 }
 .main-title-template .head{
-  width: 50vw;
+  width: 70%;
   margin-bottom: 0px;
 }
 .main-title-template .main-title{
@@ -188,7 +231,7 @@ button.music img{
   margin-bottom: 0px;
 }
 .main-title-template .line{
-  width: 60vw;
+  width: 90%;
   margin-bottom: 0px;
 }
 .main-title-template .sub-title{
@@ -292,6 +335,7 @@ button.music img{
   background-image: url(./img/Background.png);
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 .love-story .container{
   display: flex;
@@ -303,7 +347,7 @@ button.music img{
 .love-story .box-love-story{
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   overflow-x: auto;
   gap: 24px;
   margin-top: 32px;
@@ -346,19 +390,19 @@ button.music img{
   position: relative;
   z-index: 3;
 }
-.love-story .box-love-story .cover-love-story .hiasan{
+.hiasan{
   position: absolute;
-  z-index: 2;
+  z-index: 0;
 }
-.love-story .box-love-story .cover-love-story .hiasan1,
-.love-story .box-love-story .cover-love-story .hiasan3{
-  right: 0;
-  top: 10%;
+.hiasan1,
+.hiasan3{
+  right: -10%;
+  top: -2%;
 }
-.love-story .box-love-story .cover-love-story .hiasan2,
-.love-story .box-love-story .cover-love-story .hiasan4{
-  left: 0;
-  top: -20%;
+.hiasan2,
+.hiasan4{
+  left: -10%;
+  top: 0%;
 }
 /* LOVE STORY */
 /* TIMELINE */
@@ -552,6 +596,68 @@ button.music img{
 .gallery .container .box-gallery .mix-gallery .width{
   width: 100%;
   height: unset;
+}
+.gallery-zoom{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -100;
+  background-color: rgba(19, 19, 19, 0.7);
+  top: 0;
+  left: 0;
+  padding: 32px 12px;
+  justify-content: center;
+  opacity: 0;
+}
+#exit-zoom{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-end;
+  width: 40px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#exit-zoom img{
+  width: 50%;
+}
+.gallery-zoom .core-zoom{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-zoom .core-zoom img{
+  min-width: 100%;
+}
+.gallery-zoom .navigation-zoom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: calc(100vw - 12px);
+  justify-self: center;
+  align-self: center;
+}
+.gallery-zoom .navigation-zoom button{
+  background-color: rgba(245, 245, 245, 0.425);
+  border: none;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+}
+.gallery-zoom .navigation-zoom button img{
+  width: 55%;
 }
 /* GALLERY */
 .reservasi{
