@@ -4,7 +4,17 @@ const db = require("../databases")
 class TemplateController{
   static async getTemplateById(req, res){
     // ambil parameter
-    const templateId = req.params.templateId
+    const templateNode = req.params.templateId
+    var templateId = 0
+    var person
+    if(templateNode.match("to:")){
+      templateId = templateNode.split("to:")[0]
+      person = templateNode.split("to:")[1]
+    }else{
+      templateId = templateNode
+      person = false
+    }
+    console.log(person)
     try{
       // cek apakah database dan file ada
       const checkDbExist = `SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = '${templateId}'`
@@ -21,7 +31,7 @@ class TemplateController{
               throw err
             }else{
               // render tampilan yang akan digunakan dan kirim datanya
-              res.render("templates/"+templateId, {data:results, id:templateId}, function(err, html){
+              res.render("templates/"+templateId, {data:results, id:templateId, person:person}, function(err, html){
                 if(err){
                   // jika tidak ada kembalikan ke home
                   console.log(err)
@@ -60,7 +70,6 @@ class TemplateController{
 
     }
   }
-
 
 }
 

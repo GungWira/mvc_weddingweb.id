@@ -16,8 +16,10 @@
         <div class="box-hero-section">
           <span>The Wedding of</span>
           <p class="main-hero">Rai <span>&</span> Dewi</p>
-          <p class="sub-text">Turut mengundang :</p>
-          <span >Keluarga Besar Denpasar</span>
+          <% if(person){%>
+            <p class="sub-text">Turut mengundang :</p>
+            <span ><%= person  %></span>
+          <% } %>
           <button class="cover-btn">Buka Undangan</button>
         </div>
       </div>
